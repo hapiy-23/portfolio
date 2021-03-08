@@ -1,0 +1,295 @@
+html{
+    font-size:62.5%;
+}
+
+body {
+    font-family:serif,Verdana, Arial, Helvetica,メイリオ, "Gothic Pro", "ヒラギノ丸ゴ Pro W4", Osaka, "ＭＳ Ｐゴシック", sans-serif;
+    color: #dc143c;
+    background-color: aliceblue;
+    font-size: 1.6rem;
+}
+  
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #dc143c;
+}
+
+a:hover{
+    color: navy;
+    border-bottom: solid 0.3rem navy;
+    padding-bottom: 0.5rem;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.container{
+    width: 920px;
+    margin: 0 auto;
+}
+
+h2{
+    font-size: 5rem;
+    text-align: center;
+    padding: 10% 0 5% 0;
+    text-decoration: underline;
+    color: #dc143c;
+}
+
+
+/*top*/
+#top {
+    background-image: url(images/bg-img_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+
+.icon{
+    display: none;
+}
+
+.menu{
+    display: none;
+}
+
+.global-nav ,.footer-nav{
+    flex-wrap: wrap;
+    display: flex;
+    padding: 1.5% 0;
+}
+
+.global-nav li ,.footer-nav li{
+    width: 20%;
+    flex: auto;
+    text-align: center;
+}
+
+.title{
+    clear: left;
+    font-size: 8rem;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 20%;
+    text-shadow: 0 -1px 1px #000,1px 1px 1px #fff;
+}
+
+.header:after{             /*floatが親要素からはみ出すのを直す*/
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+
+/*about*/
+.about:after{             /*floatが親要素からはみ出すのを直す*/
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.section-about:after{             /*floatが親要素からはみ出すのを直す*/
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.section-about{
+    padding: 5% 10% 0 10%;
+}
+
+.about img{
+    border-radius: 50%;
+    float: left;
+}
+
+.section-inner{
+    float: right;
+}
+
+dl div{
+    line-height: 3rem;
+    width: 450px;
+}
+
+dt{
+    float: left;
+    font-weight: 700;
+    width: 30%
+}
+
+dd{
+    text-align: left;
+    width: 100%;
+    margin-right: 0;
+}
+
+dd::after{
+    content: "";
+}
+
+/*service*/
+.section-service{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 0;
+}
+
+.section-service li{
+    flex: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.section-service li p{
+    flex: auto;
+    width: 50%;
+    line-height: 3rem;
+    margin: 0 auto;
+}
+
+h3{
+    padding: 8% 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/*record*/
+.section-record{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 0;
+}
+
+.section-record li{
+    flex: auto;
+    width: 33%;
+}
+
+.section-record img{
+    width: 90%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.section-record a:hover {
+    border-bottom: none;
+    opacity: 0.5;
+}
+
+.section-record li p{
+    padding: 8% 0;
+}
+
+
+/*profile*/
+#profile{
+    text-align: center;
+}
+
+.section2 ,.section3{
+    text-align: left;
+    line-height: 3rem;
+    margin-top: 5%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.section3{
+    border: 0.1rem solid #dc143c;
+    padding: 3%;
+}
+
+.section3 p{
+    padding: 3% 0;
+}
+
+/*footer*/
+footer{
+    height: 10vh;
+    text-align: center;
+    padding-top: 3%;
+}
+
+small{
+    font-size:1.2rem;
+}
+
+.footer-nav{
+    border-top: #dc143c solid 0.3rem;
+}
+
+/*メディアクエリ*/
+@media screen and (max-width:600px){
+    /*トップ*/
+    #top{
+        background-position: center center;
+    }
+
+    .container{
+        width: auto;
+    }
+    
+    .icon{
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+        margin: 10%;
+    }
+
+    .menu{
+        font-size: 60%;
+        line-height: 3rem;
+    }
+
+    .menu:hover{
+        border-bottom: none;
+    }
+
+    .global-nav,.footer-nav{
+        display: none;
+    }
+
+    /*about*/
+    .section-inner{
+        padding-top: 10%;
+    }
+
+    dl div{
+        width: auto;
+    }
+
+    .section-about img{
+        margin: 0 15%;
+    }
+
+    /*service,record*/
+    .section-service li ,.section-record li{
+        width: 80%;
+        margin-bottom: 20%;
+        text-align: center;
+    }
+    
+    .section-service li p ,.section-record li p{
+        width: 80%;
+        text-align: center;
+    }
+
+    h3{
+        padding: 3% 0;
+    }
+
+    /*profile*/
+    .section1{
+        width: 80%;
+    }
+     
+}
